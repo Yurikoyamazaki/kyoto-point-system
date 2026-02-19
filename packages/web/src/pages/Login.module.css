@@ -1,0 +1,148 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.description {
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cardReaderSection {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cardReaderIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.cardReaderText {
+  color: #374151;
+  font-weight: 500;
+}
+
+.instructions {
+  margin-bottom: 2rem;
+}
+
+.instructionsTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.instructionsList {
+  padding-left: 1.5rem;
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.instructionsList li {
+  margin-bottom: 0.5rem;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #2c5f2d 0%, #97bc62 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loginButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.loginButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.note {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  border-radius: 4px;
+}
+
+.note p {
+  color: #92400e;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.helpCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.helpTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.helpList {
+  list-style: none;
+  padding: 0;
+}
+
+.helpList li {
+  padding: 0.75rem 0;
+  color: #4b5563;
+  border-bottom: 1px solid #e5e7eb;
+  line-height: 1.6;
+}
+
+.helpList li:last-child {
+  border-bottom: none;
+}
+
+.helpList li::before {
+  content: "📌 ";
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
