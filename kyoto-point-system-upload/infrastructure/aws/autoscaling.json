@@ -1,0 +1,27 @@
+{
+  "scalingPolicies": [
+    {
+      "policyName": "cpu-scaling",
+      "targetTrackingScalingPolicyConfiguration": {
+        "targetValue": 70.0,
+        "predefinedMetricSpecification": {
+          "predefinedMetricType": "ECSServiceAverageCPUUtilization"
+        },
+        "scaleOutCooldown": 60,
+        "scaleInCooldown": 300
+      }
+    },
+    {
+      "policyName": "request-count-scaling",
+      "targetTrackingScalingPolicyConfiguration": {
+        "targetValue": 1000.0,
+        "predefinedMetricSpecification": {
+          "predefinedMetricType": "ALBRequestCountPerTarget"
+        }
+      }
+    }
+  ],
+  "minCapacity": 2,
+  "maxCapacity": 100,
+  "comment": "14.3万人同時アクセス対応"
+}
