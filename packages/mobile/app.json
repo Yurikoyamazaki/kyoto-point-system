@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "京都市ポイントアプリ",
+    "slug": "kyoto-point-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6366F1"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "jp.kyoto.point.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "QRコードをスキャンするためにカメラを使用します",
+        "NSFaceIDUsageDescription": "安全なログインのためにFace IDを使用します"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6366F1"
+      },
+      "package": "jp.kyoto.point.app",
+      "permissions": [
+        "CAMERA",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "QRコードをスキャンするためにカメラを使用します"
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "安全なログインのためにFace IDを使用します"
+        }
+      ]
+    ],
+    "scheme": "kyoto-point",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "your-project-id"
+      }
+    }
+  }
+}
